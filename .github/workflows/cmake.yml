@@ -24,6 +24,7 @@ jobs:
         path: ${{github.workspace}}/build/opr_zh
         retention-days: 1
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v3.0.0
